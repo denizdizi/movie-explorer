@@ -1,0 +1,36 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.movie-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 100px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.movie-card {
+    width: 200px; // Kartın genişliği
+    height: 300px; // Kartın yüksekliği
+    border-radius: 10px; // Köşeleri yuvarlat
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Gölgelendirme
+    overflow: hidden; // İçerik taşmasını engelle
+    background-color: #fff; // Arka plan beyaz
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #ddd; // Çerçeve
+  
+    img {
+      width: 80%; 
+      height: 100%;
+      object-fit: cover; // Resim orantılı şekilde sığsın
+      border-radius: 5px; // Hafif yuvarlatılmış kenarlar
+      align-items: center;
+    }
+  }

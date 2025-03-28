@@ -1,0 +1,70 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.movie-list {
+    justify-content: center;
+}
+
+.movie-line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2em;
+  background-color: #f9f9f9;
+  gap: 2em;
+  justify-content: center;
+}
+
+.movie-card {
+  width: 200px; /* Kartın genişliği */
+  height: 300px; /* Kartın yüksekliği */
+  border-radius: 10px; /* Köşeleri yuvarlat */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Gölgelendirme */
+  overflow: hidden; /* İçerik taşmasını engelle */
+  background-color: #fff; /* Arka plan beyaz */
+  display: flex;
+  flex-direction: column; /* İçeriği dikey yerleştir */
+  align-items: center;
+  justify-content: flex-start; /* Başlık ve içerikler üst kısımda yer alsın */
+  padding: 10px;
+  border: 1px solid #ddd; /* Çerçeve */
+}
+
+.img-container {
+  width: 100%; /* Konteynerin genişliği */
+  height: 60%; /* Resmin yüksekliği */
+  overflow: hidden;
+  padding: 0; /* Paddingi sıfırlayın */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Resmin ortalanması için */
+  border-radius: 5px;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Resmi konteynere tam sığdır */
+  object-position: center;
+}
+
+.movie-card h3 {
+  margin-top: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .movie-line {
+    flex-wrap: wrap;
+    flex: 1 1 100%; /* 700px altına düştüğünde her kart %100 genişliğe sahip olur */
+  }
+  .movie-card {
+    width: 90%; /* Kartın genişliği %100 olur */
+  }
+
+  .img-container {
+    height: 60%; /* Küçük ekranlarda img-container yüksekliğini azaltın */
+  }
+}

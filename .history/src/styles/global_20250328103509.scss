@@ -1,0 +1,40 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.movie-line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  gap: 2em;
+}
+
+.movie-card {
+    width: 200px; // Kartın genişliği
+    height: 300px; // Kartın yüksekliği
+    border-radius: 10px; // Köşeleri yuvarlat
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Gölgelendirme
+    overflow: hidden; // İçerik taşmasını engelle
+    background-color: #fff; // Arka plan beyaz
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #ddd; // Çerçeve
+  
+    img {
+      width: 80%; 
+      height: 100%;
+      object-fit: cover; // Resim orantılı şekilde sığsın
+      border-radius: 5px; // Hafif yuvarlatılmış kenarlar
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .movie-line .movie-card {
+      width: 100%; /* Ekran 700px'den küçük olduğunda her film kartı tam genişlikte olacak */
+    }
+  }

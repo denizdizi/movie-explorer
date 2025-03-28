@@ -1,0 +1,61 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.movie-list {
+    justify-content: center;
+}
+
+.movie-line {
+  display: flex;
+flex-wrap: wrap;  
+align-items: center;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  gap: 2em;
+  justify-content: center;
+}
+
+.movie-card {
+    width: 200px; // Kartın genişliği
+    height: 300px; // Kartın yüksekliği
+    border-radius: 10px; // Köşeleri yuvarlat
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Gölgelendirme
+    overflow: hidden; // İçerik taşmasını engelle
+    background-color: #fff; // Arka plan beyaz
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #ddd; // Çerçeve
+  }
+
+  .img-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    padding: 10px;
+    justify-content: center;
+  }
+  
+  .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+
+  @media (max-width: 700px) {
+    .movie-line {
+      flex: 1 1 100%; /* 700px altına düştüğünde her kart %100 genişliğe sahip olur */
+    }
+    .movie-card {
+      width: 90%; /* Kartın genişliği %100 olur */
+
+        img {
+            width: 90%; /* Resim %100 genişliğe sahip olur */
+        }
+    }
+  }
